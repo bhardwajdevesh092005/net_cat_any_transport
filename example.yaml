@@ -1,0 +1,14 @@
+options:
+  timeout: 5
+  verbose: true
+
+transports:
+  tcp_shell:
+    type: tcp
+    listen: "127.0.0.1:8080"
+    exec: "/bin/sh"
+
+  tcp_scanner:
+    type: tcp
+    connect: "127.0.0.1:8080"
+    zero_io: true
